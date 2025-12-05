@@ -4,6 +4,6 @@ const proxy = require('express-http-proxy');
 const router = Router();
 
 // Forward everything under /auth and /password to auth-service
-router.use('/', proxy('http://notification-service:3001'));   // change URL as needed
+router.use('/', proxy('http://localhost:3006'));   // change URL as needed
 
 module.exports = router;
