@@ -4,6 +4,6 @@ const proxy = require('express-http-proxy');
 const router = Router();
 
 // Forward everything under /auth and /password to auth-service
-router.use('/', proxy('http://localhost:3008'));   // change URL as needed
+router.use('/', proxy('http://localhost:3008/reward-badges'));   // change URL as needed
 
 module.exports = router;
