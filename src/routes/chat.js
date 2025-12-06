@@ -3,7 +3,11 @@ const proxy = require('express-http-proxy');
 
 const router = Router();
 
-// Forward everything under /chat to chat-service
-router.use('/', proxy('http://localhost:3003')); // change port as needed
+// WebSocket upgrade path for Socket.io
+router.use('/socket.io', proxy('http://localhost:3003/socket.io', {
+  proxyReqPathResolver: req => "/socket.io" + req.url
+}));
+
+router.use('/', proxy('http://localhost:3003'));
 
 module.exports = router;
