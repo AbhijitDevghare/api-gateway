@@ -42,7 +42,7 @@ app.use(limiter);
 
 // Import all routes
 const userRoutes = require('./routes/user');
-const chatRoutes = require('./routes/chat');
+// const chatRoutes = require('./routes/chat');
 const engagementRoutes = require('./routes/engagement');
 const eventRoutes = require('./routes/event');
 const notificationRoutes = require('./routes/notification');
@@ -53,7 +53,7 @@ const verificationRoutes = require('./routes/verification');
 
 // Attach service routes
 app.use('/user', userRoutes);
-app.use('/chat', chatRoutes);
+// app.use('/chat', chatRoutes);
 app.use('/engagement', engagementRoutes);
 app.use('/events', eventRoutes);
 app.use('/notifications', notificationRoutes);
