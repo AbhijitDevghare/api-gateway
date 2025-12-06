@@ -53,8 +53,7 @@ const userPostRoutes = require('./routes/user-post');
 const verificationRoutes = require('./routes/verification');
 
 // Attach service routes
-app.use('/auth', authRoutes);
-app.use('/users', userRoutes);
+app.use('/user', userRoutes);
 app.use('/chat', chatRoutes);
 app.use('/engagement', engagementRoutes);
 app.use('/events', eventRoutes);
@@ -66,7 +65,6 @@ app.use('/verification', verificationRoutes);
 
 app.get('/ping', (req, res) => res.send("PONG"));
 
-// Error middleware (if you have)
 const errorMiddleware = require('./middleware/error.middleware');
 app.use(errorMiddleware);
 
