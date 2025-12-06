@@ -41,7 +41,6 @@ const limiter = rateLimit({
 app.use(limiter);
 
 // Import all routes
-const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/user');
 const chatRoutes = require('./routes/chat');
 const engagementRoutes = require('./routes/engagement');
